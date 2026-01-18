@@ -1,0 +1,61 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    
+}
+
+.nav-link {
+    color: black;
+}
+
+ .nav-link:hover {
+    
+     color: blue;
+}
+
+.hero {
+    max-width: 100%;
+}
+
+.link {
+    text-align: center;
+} 
+
+
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    display: flex;
+}
+
+.card {
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ h1, h2 {
+     color: black; 
+} 
+
+.img-thumbnail {
+    display: flex;
+   }
+
+   span {
+    font-weight: bold;
+   }
+
+
+
+
+
+
+
+
