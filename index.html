@@ -51,8 +51,8 @@
 "><span>Photography</span> </h2>
 
 
-<img class="hero  img-fluid mt-5" src="img/IMG_3162.JPG" alt="">
-Photo by <a  href="https://unsplash.com/@cgower?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank">Christopher Gower</a> 
+<img class="img-fluid mt-5" src="img/lake tahoe.jpg" alt="">
+<!-- Photo by <a  href="https://unsplash.com/@cgower?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank">Christopher Gower</a>  -->
 
 
   
@@ -71,10 +71,10 @@ Photo by <a  href="https://unsplash.com/@cgower?utm_source=unsplash&utm_medium=r
         
 <h1 class="display-2 text-center m-5 py-5">About Me</h1>
 
-<img class="img-thumbnail img-fluid mb-5" src="img/Me2.jfif" alt="">
+<!-- <img class="img-thumbnail img-fluid mb-5" src="img/Me2.jfif" alt=""> -->
 
 
-<p class="fs-2 m-3"><p class="fs-4 m-3">Born and raised in the Central Valley of California, with a decade living in Los Angeles, I became interested photography at an early age and became serious about it 5 years. </p></p>
+<p class="fs-2 m-3"><p class="fs-4 m-3">Born and raised in the Central Valley of California, with a decade living in Los Angeles, I became interested photography at an early age and became serious about it 5 years ago. I have so far done commercial photograpy but I am planning to expand into other fields as I hone my craft.  </p></p>
 </div></div></div></div>
 
 
@@ -88,46 +88,100 @@ Photo by <a  href="https://unsplash.com/@cgower?utm_source=unsplash&utm_medium=r
   
 <br>
         <h1 class="display-4 text-center m-5 py-5">My Work</h1>
-            <!-- work -->
-            <div class="container img-fluid fs-1 pt-5">
-              <div class="row">
-                <!-- <div class="col-6">
-                  <div class="card">
-                  <img class="img-fluid" src="img/TLC Website.png"  alt="">
-                  <a class="fs-5 text-center" href="https://www.the-life-church.org/" target="_blank">the life church</a>
-                </div></div> -->
-                
-                <div class="col-6">
-                  <div class="card">
-                  <img class="img-fluid" src="img/IMG_3163.JPG" alt="">
-                 <a  class="fs-5 text-center" href="https://www.cordondetres.com/" target="_blank">Site 1</a>
-                </div>
-              </div>
-                
-                <div class="col-6">
-                  <div class="card mt-2">
-                  <img class="img-fluid" src="img/IMG_3164.JPG" alt="">
-                 <a  class="fs-5 text-center " href="https://sedandelivery.netlify.app/" target="_blank">Site 2</a>
-                </div>
-              </div>
-              </div>
-            </div>
-            <br><br><br>
-                
-              
-            
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+    }
 
-    
-     
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 15px;
+      padding: 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
 
+    .gallery img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      cursor: pointer;
+      border-radius: 8px;
+      transition: transform 0.3s ease;
+    }
 
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
 
+    /* Lightbox */
+    .lightbox {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.8);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+    }
 
+    .lightbox img {
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 10px;
+    }
 
-  
-<br><br><br><br><br>
-</section>
-<!-- <hr class="hr"> -->
+    .lightbox:active {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+<div class="gallery">
+  <img src="img/lake tahoe.jpg" alt="">
+  <img src="img/IMG_3158.JPG" alt="">
+  <img src="img/oregon coast.jpg" alt="">
+  <img src="img/in bloom.png" alt="">
+  <img src="img/post.jpg" alt="">
+  <img src="img/room.jpg" alt="">
+  <img src="img/room2.jpg" alt="">
+  <img src="img/tahoeroom.jpg" alt="">
+  <img src="img/hill.JPG" alt="">
+  <img src="img/sunset.jpg" alt="">
+  <img src="img/" alt="">
+</div>
+
+<div class="lightbox" id="lightbox">
+  <img src="" alt="">
+</div>
+
+<script>
+  const galleryImages = document.querySelectorAll('.gallery img');
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImage = lightbox.querySelector('img');
+
+  galleryImages.forEach(img => {
+    img.addEventListener('click', () => {
+      lightboxImage.src = img.src;
+      lightbox.style.display = 'flex';
+    });
+  });
+
+  lightbox.addEventListener('click', () => {
+    lightbox.style.display = 'none';
+  });
+</script>
+
+</body>
+</html>
+
 
             <!-- contact -->
 
